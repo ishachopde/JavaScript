@@ -1,0 +1,36 @@
+<!doctype HTML>
+
+
+<html>
+
+  <head>
+    <title> JavaScript</title>
+  </head>
+
+  <body>
+<p id="number-of-fingers"> How many fingers am I holding up?</p>
+<p><input id="finger-count" type="text"></p>
+<p> <button id="guess-finger-count">Guess</button></p>
+<p id="result-count"></p>
+
+<script type="text/javascript">
+document.getElementById('guess-finger-count').onclick = function(){
+    var fingerCount = document.getElementById('finger-count').value;
+    var randomfingerCount = Math.random()*6;
+    var actualFingerCount = Math.floor(randomfingerCount);
+
+      alert(actualFingerCount);
+    if(document.getElementById('finger-count').value == actualFingerCount){
+          document.getElementById('result-count').innerHTML = "You got it right! " + fingerCount;
+    }
+    else {
+      alert("Try again");
+    }
+
+
+}
+
+
+</script>
+  </body>
+</html>
